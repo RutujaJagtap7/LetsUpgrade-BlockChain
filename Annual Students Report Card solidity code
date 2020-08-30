@@ -1,0 +1,33 @@
+pragma solidity 0.4.18 <= 0.6.12;
+contract ReportCard{
+    string Name;
+    int Class; 
+    int    Division;
+    int    Roll_Number;
+    string Subjects;
+    int Year;
+    int Percentage;
+    function ReportCard(string newName, int newClass, int newDivision, int newRoll_Number, string newSubjects, 
+    int newYear, int newPercentage) public {
+        
+        Name = newName;
+        Class = newClass;
+        Division = newDivision;
+        Roll_Number = newRoll_Number;
+        Subjects = newSubjects;
+        Year = newYear;
+        Percentage = newPercentage;
+        
+    }
+    function getReportCard() public view returns(string,int,int,int,string,int,int) {
+        return(Name, Class, Division, Roll_Number, Subjects, Year, Percentage);
+    }
+    function setReportCard(string newName, int newClass, int newYear, int newPercentage) public{
+        Name = newName;
+        Class = newClass;
+        Year = newYear;
+        Percentage = newPercentage;
+        
+    }
+}
+
